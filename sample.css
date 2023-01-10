@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  background: linear-gradient(to bottom, rgb(0, 242, 255), rgb(244, 244, 244));
+}
+section {
+  min-height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+section:nth-child(1) {
+  color: beige;
+  background-color: rgba(56, 18, 60, 0.845);
+}
+
+section:nth-child(2) {
+  color: brown;
+}
+section:nth-child(3) {
+  color: rgba(149, 3, 245, 0.993);
+  background-color: rgba(42, 124, 165, 0);
+  text-transform: capitalize;
+}
+section .card {
+  height: 35vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  section h1 {
+    border-color: black;
+    background-color: brown;
+    font-size: 100px;
+    overflow: hidden;
+  }
+  section .card {
+    overflow: hidden;
+    flex-direction: column;
+  }
+}
+.reveal {
+  transform: translateY(130px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+/* @keyframes slideInUp {
+  0% {
+    transform: translatey(50%);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+.reveal.active {
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: slideInUp;
+} */
